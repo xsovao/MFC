@@ -64,6 +64,7 @@ BEGIN_MESSAGE_MAP(CHelloWorldDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_DROP, &CHelloWorldDlg::OnBnClickedDrop)
 END_MESSAGE_MAP()
 
 
@@ -152,3 +153,10 @@ HCURSOR CHelloWorldDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CHelloWorldDlg::OnBnClickedDrop()
+{
+	// TODO: Add your control notification handler code here
+	MessageBox(L"The bass has been dropped.",L"It's done.", MB_ICONEXCLAMATION);
+}
